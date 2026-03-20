@@ -7,39 +7,21 @@ m1, d1, m2, d2 = map(int, input().split())
 m_30 = [4, 6, 9, 11]
 m_31 = [1, 3, 5, 7, 8, 10, 12]
 
+sign 
+
 days = 0
 while True:
     if m1 == m2:
-        if d2 > d1:
-            days += d2-d1
-            break
-        elif d2 < d1:
-            days += 7+(d2-d1)
-            break
-        else:
-            break
+        days += d2 - d1
+        break
     
-    if m1 < m2:
-        if m1 in m_30:
-            days += 30
-            m1 += 1
-        elif m1 in m_31:
-            days += 31
-            m1 += 1
-        elif m1 == 2:
-            days += 28
-            m1 += 1
-    
-    elif m1 > m2:
-        if m2 in m_30:
-            days += 30
-            m2 += 1
-        elif m2 in m_31:
-            days += 31
-            m2 += 1
-        elif m2 == 2:
-            days += 28
-            m2 += 1
+    if m1 in m_30:
+        days += 30
+    elif m1 in m_31:
+        days += 31
+    elif m1 == 2:
+        days += 28
+    m1 += 1
 
 def dow(d):
     if d % 7 == 0:
