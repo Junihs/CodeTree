@@ -28,5 +28,5 @@ while True:
         days += 28
     m1 += 1
 
-dow = ["Mon", "Tue", "wed", "Thu", "Fri", "Sat", "Sun"]
+dow = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 print(dow[(sign * days) % 7])
